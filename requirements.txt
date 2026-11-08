@@ -1,0 +1,42 @@
+﻿# SpeakSense backend dependencies
+# Version floors are the versions verified working on Python 3.13.
+# (The previous exact pins predated 3.13 and no longer install there.)
+
+# Core Audio Processing
+librosa>=0.11.0
+soundfile>=0.14.0
+imageio-ffmpeg>=0.5.1   # optional ffmpeg fallback used by preprocess.py
+numpy>=2.0
+scipy>=1.13.0
+matplotlib>=3.8.0
+
+# Speaker Diarization (requires HUGGINGFACE_TOKEN at runtime)
+pyannote.audio>=4.0.0
+torch>=2.2.0
+torchaudio>=2.2.0
+
+# Kannada ASR / Transcription
+faster-whisper>=1.2.0
+
+# Acoustic Feature Extraction
+praat-parselmouth>=0.4.7
+
+# Classification & ML
+scikit-learn>=1.5.0
+xgboost>=2.1.0
+joblib>=1.4.2
+
+# Data handling
+pandas>=2.2.0
+
+# API Backend
+fastapi>=0.115.0
+uvicorn>=0.30.1
+python-multipart>=0.0.9
+
+# Reporting
+reportlab>=4.2.0
+
+# Optional model-training extras (not needed to run the API):
+# imbalanced-learn>=0.13.0   # SMOTE oversampling during training
+# shap>=0.45.1               # explainability upgrade
